@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No BS Spine Consults — Straight Talk from a Spine Surgeon</title>
+<meta name="description" content="A straight answer from a board-certified spine surgeon. Surgery or no surgery — clear explanations, no pressure, no hospital agenda. Available in Kentucky & Indiana.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nobsspineconsults.com">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nobsspineconsults.com">
+<meta property="og:title" content="No BS Spine Consults — Straight Talk from a Spine Surgeon">
+<meta property="og:description" content="A straight answer from a board-certified spine surgeon. Surgery or no surgery — clear explanations, no pressure, no hospital agenda.">
+<meta property="og:site_name" content="No BS Spine Consults">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="No BS Spine Consults">
+<meta name="twitter:description" content="A straight answer from a board-certified spine surgeon. Surgery or no surgery — no pressure, no hospital agenda.">
+
+<!-- Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --ink-muted: #4a4a4a;
+    --ink-faint: #8a8a8a;
+    --slate: #2c3e50;
+    --slate-light: #3d5166;
+    --rule: #e0e0e0;
+    --bg: #f9f8f6;
+    --white: #ffffff;
+    --serif: 'Libre Baskerville', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(249,248,246,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-cta {
+    background: var(--slate);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--slate-light); }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .container-wide { max-width: 1100px; margin: 0 auto; }
+
+  /* HERO */
+  #hero {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    text-align: center;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1.5rem;
+  }
+  .hero-eyebrow span {
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--ink-faint);
+    vertical-align: middle;
+    margin: 0 0.6rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-muted);
+    margin-bottom: 0.75rem;
+  }
+  .hero-support {
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+    margin-bottom: 2.5rem;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--slate);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.95rem 2.5rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--slate-light); transform: translateY(-1px); }
+
+  /* CREDIBILITY STRIP */
+  #credibility {
+    background: var(--slate);
+    padding: 2.2rem 2rem;
+  }
+  .cred-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .cred-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .cred-icon { width: 16px; height: 16px; opacity: 0.7; flex-shrink: 0; }
+
+  /* PROBLEM */
+  #problem { background: var(--bg); }
+  .section-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+  }
+  .lead {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    max-width: 600px;
+    line-height: 1.75;
+  }
+
+  /* WHAT YOU GET */
+  #what {
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 3rem;
+  }
+  .card { background: var(--white); padding: 2.5rem 2rem; }
+  .card-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--rule);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+  }
+  .card h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+  .card p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.65; }
+
+  /* HOW IT WORKS */
+  #how { background: var(--bg); }
+  .steps { margin-top: 3rem; display: flex; flex-direction: column; }
+  .step {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    font-family: var(--serif);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ink-faint);
+    padding-top: 0.15rem;
+    letter-spacing: 0.05em;
+  }
+  .step-content h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .step-content p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; }
+
+  /* PRICING */
+  #pricing {
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+  }
+  .pricing-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .tier {
+    border: 1px solid var(--rule);
+    background: var(--white);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .tier:hover { border-color: var(--slate); }
+  .tier.featured { border-color: var(--slate); background: var(--slate); color: #fff; }
+  .tier-badge {
+    position: absolute;
+    top: -1px; right: 1.5rem;
+    background: var(--slate-light);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+  }
+  .tier-name {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.75rem;
+  }
+  .tier.featured .tier-name { color: rgba(255,255,255,0.6); }
+  .tier-price {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .tier.featured .tier-price { color: #fff; }
+  .tier-desc { font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 1.5rem; line-height: 1.5; }
+  .tier.featured .tier-desc { color: rgba(255,255,255,0.65); }
+  .tier-features {
+    list-style: none;
+    margin-bottom: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .tier-features li {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.4;
+  }
+  .tier.featured .tier-features li { color: rgba(255,255,255,0.8); }
+  .tier-features li::before {
+    content: '—';
+    color: var(--ink-faint);
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    margin-top: 0.05rem;
+  }
+  .tier.featured .tier-features li::before { color: rgba(255,255,255,0.4); }
+  .btn-tier {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.8rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--slate);
+    color: var(--slate);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .btn-tier:hover { background: var(--slate); color: #fff; }
+  .tier.featured .btn-tier { border-color: rgba(255,255,255,0.5); color: #fff; }
+  .tier.featured .btn-tier:hover { background: rgba(255,255,255,0.15); }
+
+  /* PROMISE */
+  #promise { background: var(--bg); border-top: 1px solid var(--rule); }
+  .promise-inner { max-width: 620px; }
+  blockquote {
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--slate);
+  }
+
+  /* FAQ */
+  #faq { background: var(--white); border-top: 1px solid var(--rule); }
+  .faq-list { margin-top: 3rem; display: flex; flex-direction: column; }
+  .faq-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .faq-item:first-child { border-top: 1px solid var(--rule); }
+  .faq-q { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; color: var(--ink); line-height: 1.4; }
+  .faq-a { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.65; }
+
+  /* INTAKE FORM */
+  #intake { background: var(--bg); border-top: 1px solid var(--rule); }
+  .form-grid {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 620px;
+  }
+  .form-grid .full { grid-column: 1 / -1; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 0.7rem 0.9rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--slate); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    margin-top: 1rem;
+    background: var(--slate);
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .form-submit:hover { background: var(--slate-light); }
+  .form-success {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--slate);
+    font-size: 0.88rem;
+    color: var(--ink-muted);
+  }
+
+  /* FINAL CTA */
+  #final { background: var(--slate); color: #fff; text-align: center; padding: 6rem 2rem; }
+  #final h2 { color: #fff; margin-bottom: 0.75rem; }
+  #final p { color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 2.5rem; }
+  .btn-white {
+    display: inline-block;
+    background: #fff;
+    color: var(--slate);
+    text-decoration: none;
+    padding: 0.95rem 2.5rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-white:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+  footer strong { color: rgba(255,255,255,0.65); font-weight: 500; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.65s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.22s; }
+  .delay-3 { animation-delay: 0.36s; }
+  .delay-4 { animation-delay: 0.5s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .faq-item { grid-template-columns: 1fr; gap: 0.6rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="https://nobsspineconsults.com">No BS Spine Consults</a>
+  <button class="nav-cta" onclick="openCalendly()">Get your consult</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <p class="hero-eyebrow fade-up"><span></span>Board-Certified Spine Surgery<span></span></p>
+    <h1 class="fade-up delay-1">No BS<br>Spine Consults</h1>
+    <p class="hero-sub fade-up delay-2">A straight answer from a spine surgeon — surgery or no surgery.</p>
+    <p class="hero-support fade-up delay-3">Clear explanations. No pressure. No hospital agenda.</p>
+    <button class="btn-primary fade-up delay-4" onclick="openCalendly()">Get your No BS consult</button>
+  </div>
+</section>
+
+<!-- CREDIBILITY STRIP -->
+<div id="credibility">
+  <div class="cred-grid">
+    <div class="cred-item">
+      <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      Board-Certified Spine Surgeon
+    </div>
+    <div class="cred-item">
+      <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+      MRI & Imaging Review
+    </div>
+    <div class="cred-item">
+      <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h8M12 8v8M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Surgery vs. No Surgery Guidance
+    </div>
+    <div class="cred-item">
+      <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Cash-Pay, No Insurance
+    </div>
+    <div class="cred-item">
+      <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Kentucky & Indiana
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <p class="section-label">The problem</p>
+    <h2>Conflicting spine opinions are exhausting.</h2>
+    <p class="lead">One doctor says surgery. Another says physical therapy. A third says you just need to live with it. You've spent months navigating a system that profits from complexity — and you still don't have a clear answer. You deserve a straight opinion from a surgeon who has nothing to sell you except the truth.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="what">
+  <div class="container">
+    <p class="section-label">What you get</p>
+    <h2>Three things. Nothing more.</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>Plain-English Diagnosis</h3>
+        <p>What's actually happening in your spine — explained in terms you can understand and act on, not medical jargon designed to confuse.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>Direct Recommendation</h3>
+        <p>Surgery or no surgery. Physical therapy or watchful waiting. A clear position — not a hedge, not a referral carousel.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>Clear Next Step</h3>
+        <p>What to do with this information. Whether you pursue treatment locally, at miiSpine, or elsewhere — you leave with a plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2>Four steps to clarity.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Choose your consult tier</h3>
+          <p>Select the level of review that matches your situation — from a focused record review to a comprehensive surgical risk assessment.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Upload imaging and records</h3>
+          <p>Securely submit your MRI, CT scans, X-rays, and prior treatment notes. Standard DICOM and PDF formats accepted.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Review — live or asynchronous</h3>
+          <p>Depending on your tier, receive a written report or join a live telemedicine session with Dr. V to walk through your case directly.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Receive a clear, honest recommendation</h3>
+          <p>A written summary you keep — what you have, what it means, and what to do next. No hospital agenda. No upsell.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container-wide">
+    <div style="max-width:860px; margin:0 auto 0 0; padding:0 0 3rem 0;">
+      <p class="section-label">Pricing</p>
+      <h2>Choose your level of review.</h2>
+      <p style="color:var(--ink-faint); font-size:0.88rem;">All consults are cash-pay. No insurance billing. No surprise charges. Available to residents of Kentucky and Indiana.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="tier">
+        <p class="tier-name">Essential</p>
+        <p class="tier-price">$149</p>
+        <p class="tier-desc">Expert Record & Imaging Review</p>
+        <ul class="tier-features">
+          <li>Written review of your MRI, CT, or X-rays</li>
+          <li>Review of prior clinical notes and records</li>
+          <li>Surgery vs. no surgery verdict</li>
+          <li>Plain-English written summary</li>
+          <li>Delivered within 48–72 hours</li>
+        </ul>
+        <a href="https://buy.stripe.com/cNiaEX3n4drTdthcdd6sw02" class="btn-tier" target="_blank">Start — $149</a>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-badge">Most selected</div>
+        <p class="tier-name">Live Consult</p>
+        <p class="tier-price">$299</p>
+        <p class="tier-desc">Live No BS Spine Consult</p>
+        <ul class="tier-features">
+          <li>Everything in Essential</li>
+          <li>Live telemedicine session with Dr. V</li>
+          <li>Real-time image walkthrough on screen</li>
+          <li>Ask your questions directly</li>
+          <li>Written summary provided after session</li>
+        </ul>
+        <a href="https://buy.stripe.com/4gMbJ1g9Q73v3SH7WX6sw01" class="btn-tier" target="_blank">Start — $299</a>
+      </div>
+
+      <div class="tier">
+        <p class="tier-name">Elite</p>
+        <p class="tier-price">$549</p>
+        <p class="tier-desc">Surgical Decision Review</p>
+        <ul class="tier-features">
+          <li>Everything in Live Consult</li>
+          <li>Comprehensive medical history review</li>
+          <li>Proprietary surgical risk stratification</li>
+          <li>Detailed written report with risk profile</li>
+          <li>Suitable for pre-surgical second opinions</li>
+        </ul>
+        <a href="https://buy.stripe.com/bJe7sLcXE5Zr2OD6ST6sw00" class="btn-tier" target="_blank">Start — $549</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section id="promise">
+  <div class="container">
+    <div class="promise-inner">
+      <p class="section-label">The promise</p>
+      <blockquote>"If surgery isn't the right answer, I'll say so."</blockquote>
+      <p class="lead" style="font-size:0.95rem;">Most spine consultations happen inside systems that benefit when you proceed with treatment. This is different. My only obligation here is to give you an honest read of your situation. If you don't need surgery, you'll hear it clearly — and you'll know what to do instead. If you do need surgery, I'll explain why and help you understand your options — regardless of where you choose to have it done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label">Common questions</p>
+    <h2>Before you reach out.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is this emergency care?</div>
+        <div class="faq-a">No. This service is not designed for acute emergencies. If you are experiencing sudden loss of bowel or bladder control, rapidly progressing weakness, or severe trauma — go to an emergency room immediately. This service is for patients with chronic or ongoing spine conditions seeking clarity.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is this a replacement for my local doctor?</div>
+        <div class="faq-a">No. This is an advisory second opinion. It complements your existing care — it does not replace your primary care physician or treating specialist. Think of it as a clear, unbiased read from a surgeon with no stake in what you decide next.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you prescribe medications?</div>
+        <div class="faq-a">No. This service does not include prescriptions, procedures, or ongoing treatment management. It is a consultation service focused exclusively on diagnosis review and treatment recommendations.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I pursue treatment anywhere?</div>
+        <div class="faq-a">Yes, absolutely. The recommendation you receive is yours to take anywhere. You are under no obligation to pursue treatment at miiSpine or any affiliated provider. The goal is to give you clarity — what you do with it is your choice.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTAKE FORM -->
+<section id="intake">
+  <div class="container">
+    <p class="section-label">Get in touch</p>
+    <h2>Tell us about your situation.</h2>
+    <p class="lead" style="font-size:0.92rem; margin-bottom:0;">Not ready to book yet? Send a brief summary and we'll follow up within one business day.</p>
+    <form class="form-grid" id="intakeForm" action="https://formspree.io/f/xzdkdwww" method="POST">
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(502) 555-0100">
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+          <option value="" disabled selected>Select state</option>
+          <option value="KY">Kentucky</option>
+          <option value="IN">Indiana</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label for="tier">Consult tier of interest</label>
+        <select id="tier" name="tier">
+          <option value="" disabled selected>Select a tier</option>
+          <option value="Essential — $149">Essential — $149 (Record & Imaging Review)</option>
+          <option value="Live Consult — $299">Live Consult — $299 (30-min with Dr. V)</option>
+          <option value="Elite — $549">Elite — $549 (Surgical Decision Review)</option>
+          <option value="Not sure">Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label for="situation">Brief description of your situation</label>
+        <textarea id="situation" name="situation" placeholder="Describe your symptoms, how long you've had them, and what imaging you have available..."></textarea>
+      </div>
+      <div class="full">
+        <button type="submit" class="form-submit">Send message</button>
+        <div class="form-success" id="formSuccess">
+          Thank you. We'll be in touch within one business day.
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final">
+  <div class="container">
+    <h2>Ready for a straight answer?</h2>
+    <p>No pressure. No hospital agenda. Just clarity.</p>
+    <button class="btn-white" onclick="openCalendly()">Get your No BS consult</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="margin-bottom:0.75rem;"><strong>No BS Spine Consults</strong> &nbsp;|&nbsp; nobsspineconsults.com &nbsp;|&nbsp; A service of miiSpine, Louisville, Kentucky</p>
+  <p style="max-width:680px; margin:0 auto;">
+    <strong>Medical Disclaimer:</strong> No BS Spine Consults is an advisory opinion service only. It does not constitute emergency care, does not establish a formal physician-patient relationship, and does not include the prescribing of medications or the performance of procedures. This service is intended for informational and educational purposes. Consults are available to residents of Kentucky and Indiana only. If you are experiencing a medical emergency, call 911 or go to your nearest emergency room immediately.
+  </p>
+  <p style="margin-top:1rem;">© 2025 miiSpine. All rights reserved.</p>
+</footer>
+
+<script>
+  // Calendly popup
+  function openCalendly() {
+    Calendly.initPopupWidget({ url: 'https://calendly.com/drv-4/45min' });
+    return false;
+  }
+
+  // Formspree AJAX submission
+  const form = document.getElementById('intakeForm');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.textContent = 'Sent';
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error — try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
