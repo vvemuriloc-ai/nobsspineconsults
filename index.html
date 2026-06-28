@@ -525,6 +525,8 @@
     .faq-item { grid-template-columns: 1fr; gap: 0.6rem; }
     .card-grid { grid-template-columns: 1fr; }
     .form-grid { grid-template-columns: 1fr; }
+    #about .container > div { grid-template-columns: 1fr; }
+    #about .container > div > div:last-child { order: -1; }
   }
 </style>
 </head>
@@ -709,7 +711,50 @@
     <div class="promise-inner">
       <p class="section-label">The promise</p>
       <blockquote>"If surgery isn't the right answer, I'll say so."</blockquote>
-      <p class="lead" style="font-size:0.95rem;">Most spine consultations happen inside systems that benefit when you proceed with treatment. This is different. My only obligation here is to give you an honest read of your situation. If you don't need surgery, you'll hear it clearly — and you'll know what to do instead. If you do need surgery, I'll explain why and help you understand your options — regardless of where you choose to have it done.</p>
+      <p class="lead" style="font-size:0.95rem;">Most spine consultations happen inside systems that benefit when you proceed with treatment. This is different. I have no hospital quota, no system agenda, and no financial incentive to recommend surgery. My only obligation is to give you an honest read of your specific situation — and tell you exactly what I would do if you were my own family member.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--white); border-top:1px solid var(--rule);">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+      <div>
+        <p class="section-label">About Dr. V</p>
+        <h2 style="margin-bottom:1rem;">Fellowship-trained.<br>Independent.<br>No agenda.</h2>
+        <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1rem;">I'm Venu Vemuri, DO — a board-certified, fellowship-trained minimally invasive spine surgeon and founder of miiSpine in Louisville, Kentucky.</p>
+        <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1rem;">I trained at Norton Leatherman Spine Center and have performed over 400 spine surgeries. I left a large group practice to build an independent practice — because I believe patients deserve a surgeon whose only loyalty is to them.</p>
+        <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1.5rem;">No BS Spine Consults exists because too many patients come to me confused, scared, and having received completely different recommendations from different doctors. This is my attempt to fix that — one honest conversation at a time.</p>
+        <div style="display:flex; flex-direction:column; gap:0.5rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--ink-muted);">
+            <span style="color:var(--slate); font-weight:600;">—</span> Board-Certified, American Osteopathic Board of Orthopedic Surgery
+          </div>
+          <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--ink-muted);">
+            <span style="color:var(--slate); font-weight:600;">—</span> Fellowship-Trained, Norton Leatherman Spine Center
+          </div>
+          <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--ink-muted);">
+            <span style="color:var(--slate); font-weight:600;">—</span> 400+ spine surgeries performed
+          </div>
+          <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--ink-muted);">
+            <span style="color:var(--slate); font-weight:600;">—</span> Licensed in Kentucky & Indiana
+          </div>
+          <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--ink-muted);">
+            <span style="color:var(--slate); font-weight:600;">—</span> Founder, miiSpine — Independent Spine Practice
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <img
+          src="https://raw.githubusercontent.com/vvemuriloc-ai/nobsspineconsults/main/1T3A9380-2.jpg"
+          alt="Dr. Venu Vemuri, DO — Board-Certified Spine Surgeon"
+          style="width:100%; max-height:540px; object-fit:cover; object-position:center top; display:block; filter:grayscale(15%);"
+        />
+        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(44,62,80,0.85)); padding:1.5rem 1.25rem 1.25rem;">
+          <p style="color:#fff; font-family:'Libre Baskerville',Georgia,serif; font-size:1rem; font-weight:700; margin:0 0 0.15rem 0;">Venu Vemuri, DO</p>
+          <p style="color:rgba(255,255,255,0.75); font-size:0.78rem; margin:0; letter-spacing:0.05em; text-transform:uppercase;">Board-Certified Spine Surgeon · miiSpine</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
