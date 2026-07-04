@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -813,53 +814,8 @@
   <div class="container">
     <p class="section-label">Get in touch</p>
     <h2>Tell us about your situation.</h2>
-    <p class="lead" style="font-size:0.92rem; margin-bottom:0;">Not ready to book yet? Send a brief summary and we'll follow up within one business day.</p>
-    <form class="form-grid" id="intakeForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="4a7b5ae9-fe95-4d08-b7fa-a08302381e0f">
-      <input type="hidden" name="subject" value="New No BS Spine Consult Inquiry">
-      <input type="hidden" name="from_name" value="No BS Spine Consults">
-      <input type="hidden" name="redirect" value="false">
-      <div class="form-group">
-        <label for="name">Full name</label>
-        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="jane@email.com" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone number</label>
-        <input type="tel" id="phone" name="phone" placeholder="(502) 555-0100">
-      </div>
-      <div class="form-group">
-        <label for="state">State</label>
-        <select id="state" name="state" required>
-          <option value="" disabled selected>Select state</option>
-          <option value="KY">Kentucky</option>
-          <option value="IN">Indiana</option>
-        </select>
-      </div>
-      <div class="form-group full">
-        <label for="tier">Consult tier of interest</label>
-        <select id="tier" name="tier">
-          <option value="" disabled selected>Select a tier</option>
-          <option value="Essential — $149">Essential — $149 (Record & Imaging Review)</option>
-          <option value="Live Consult — $299">Live Consult — $299 (30-min with Dr. V)</option>
-          <option value="Elite — $549">Elite — $549 (Surgical Decision Review)</option>
-          <option value="Not sure">Not sure yet</option>
-        </select>
-      </div>
-      <div class="form-group full">
-        <label for="situation">Brief description of your situation</label>
-        <textarea id="situation" name="situation" placeholder="Describe your symptoms, how long you've had them, and what imaging you have available..."></textarea>
-      </div>
-      <div class="full">
-        <button type="submit" class="form-submit">Send message</button>
-        <div class="form-success" id="formSuccess">
-          Thank you. We'll be in touch within one business day.
-        </div>
-      </div>
-    </form>
+    <p class="lead" style="font-size:0.92rem; margin-bottom:2rem;">Not ready to book yet? Send us a message and we'll follow up within one business day.</p>
+    <a href="https://www.miispine.com/request-an-appointment" target="_blank" class="btn-primary">Request an Appointment</a>
   </div>
 </section>
 
@@ -887,33 +843,6 @@
     Calendly.initPopupWidget({ url: 'https://calendly.com/drv-4/45min' });
     return false;
   }
-
-  // Formspree AJAX submission
-  const form = document.getElementById('intakeForm');
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        form.reset();
-        document.getElementById('formSuccess').style.display = 'block';
-        btn.textContent = 'Sent';
-      } else {
-        btn.textContent = 'Error — try again';
-        btn.disabled = false;
-      }
-    } catch {
-      btn.textContent = 'Error — try again';
-      btn.disabled = false;
-    }
-  });
 </script>
 
 <!-- No BS Chat Widget -->
