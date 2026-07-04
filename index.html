@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -815,7 +814,11 @@
     <p class="section-label">Get in touch</p>
     <h2>Tell us about your situation.</h2>
     <p class="lead" style="font-size:0.92rem; margin-bottom:0;">Not ready to book yet? Send a brief summary and we'll follow up within one business day.</p>
-    <form class="form-grid" id="intakeForm" action="https://formspree.io/f/xzdkdwww" method="POST">
+    <form class="form-grid" id="intakeForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="4a7b5ae9-fe95-4d08-b7fa-a08302381e0f">
+      <input type="hidden" name="subject" value="New No BS Spine Consult Inquiry">
+      <input type="hidden" name="from_name" value="No BS Spine Consults">
+      <input type="hidden" name="redirect" value="false">
       <div class="form-group">
         <label for="name">Full name</label>
         <input type="text" id="name" name="name" placeholder="Jane Smith" required>
@@ -893,7 +896,7 @@
     btn.textContent = 'Sending…';
     btn.disabled = true;
     try {
-      const res = await fetch(form.action, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
