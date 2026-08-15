@@ -527,6 +527,37 @@
     color: var(--ink-muted);
   }
 
+  /* VIDEO */
+  #video {
+    background: var(--bg);
+    border-top: 1px solid var(--rule);
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    border: 1px solid var(--rule);
+    box-shadow: 0 12px 48px rgba(26,26,26,0.12);
+    background: #000;
+  }
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
   /* REVIEWS */
   #reviews {
     background: var(--white);
@@ -702,6 +733,7 @@
   /* RESPONSIVE */
   @media (max-width: 640px) {
     #hero { grid-template-columns: 1fr; }
+    .video-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
     .hero-text { padding: 2.5rem 1.5rem 2.5rem; text-align: center; }
     .hero-eyebrow span { display: none; }
     .hero-photo { min-height: 420px; }
@@ -730,7 +762,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-text">
-    <p class="hero-eyebrow fade-up"><span></span>Board-Certified Spine Surgery</p>
+    <p class="hero-eyebrow fade-up"><span></span>Board-Certified Spine Surgeon</p>
     <h1 class="fade-up delay-1">No BS<br>Spine Consult</h1>
     <p class="hero-sub fade-up delay-2">A straight answer from a spine surgeon — surgery or no surgery.</p>
     <p class="hero-support fade-up delay-3">Clear explanations. No pressure. No hospital agenda.</p>
@@ -772,6 +804,22 @@
     </div>
   </div>
 </div>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="video-grid">
+    <div>
+      <p class="section-label">Watch</p>
+      <h2>Hear it straight<br>from Dr. V.</h2>
+      <p class="lead" style="font-size:0.95rem; margin-bottom:2rem;">One minute. No jargon. Why this service exists and what you actually get — from a spine surgeon who has been the patient too.</p>
+      <button class="btn-primary" onclick="openCalendly()">Get your No BS consult</button>
+      <p style="margin-top:1.25rem; font-size:0.8rem; color:var(--ink-faint);">More videos on <a href="https://youtube.com/@nobsspineconsult" target="_blank" style="color:var(--slate);">YouTube</a>, TikTok, Facebook, and Instagram.</p>
+    </div>
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/t_ueFe0slMc" title="No BS Spine Consult — Dr. V" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
 
 <!-- REVIEWS -->
 <section id="reviews">
@@ -1227,3 +1275,4 @@
 
 </body>
 </html>
+
