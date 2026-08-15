@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>No BS Spine Consults — Straight Talk from a Spine Surgeon</title>
+<title>No BS Spine Consult — Straight Talk from a Spine Surgeon</title>
 <meta name="description" content="A straight answer from a board-certified spine surgeon. Surgery or no surgery — clear explanations, no pressure, no hospital agenda. Available in Kentucky & Indiana.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nobsspineconsults.com">
@@ -11,13 +11,13 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nobsspineconsults.com">
-<meta property="og:title" content="No BS Spine Consults — Straight Talk from a Spine Surgeon">
+<meta property="og:title" content="No BS Spine Consult — Straight Talk from a Spine Surgeon">
 <meta property="og:description" content="A straight answer from a board-certified spine surgeon. Surgery or no surgery — clear explanations, no pressure, no hospital agenda.">
-<meta property="og:site_name" content="No BS Spine Consults">
+<meta property="og:site_name" content="No BS Spine Consult">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="No BS Spine Consults">
+<meta name="twitter:title" content="No BS Spine Consult">
 <meta name="twitter:description" content="A straight answer from a board-certified spine surgeon. Surgery or no surgery — no pressure, no hospital agenda.">
 
 <!-- Google Ads (No BS) -->
@@ -477,6 +477,135 @@
     color: var(--ink-muted);
   }
 
+  /* REVIEWS */
+  #reviews {
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+    padding: 4.5rem 0;
+    overflow: hidden;
+  }
+  .reviews-header {
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+  }
+  .rating-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .rating-score {
+    font-family: var(--serif);
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .rating-stars {
+    color: #E7A33E;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+  }
+  .rating-sub {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+  .reviews-marquee { position: relative; }
+  .reviews-marquee::before,
+  .reviews-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .reviews-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white), transparent);
+  }
+  .reviews-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white), transparent);
+  }
+  .reviews-track {
+    display: flex;
+    gap: 1.25rem;
+    width: max-content;
+    animation: reviewScroll 55s linear infinite;
+  }
+  .reviews-track:hover { animation-play-state: paused; }
+  @keyframes reviewScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .review-card {
+    width: 320px;
+    flex-shrink: 0;
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .review-card .review-stars {
+    color: #E7A33E;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+  .review-card p {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+  .review-card .review-name {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .review-card .review-source {
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+  }
+
+  /* WAITLIST */
+  #waitlist {
+    background: var(--slate);
+    border-top: 1px solid var(--rule);
+  }
+  #waitlist .section-label { color: rgba(255,255,255,0.5); }
+  #waitlist h2 { color: #fff; }
+  #waitlist .lead { color: rgba(255,255,255,0.7); }
+  #waitlist .form-group label { color: rgba(255,255,255,0.55); }
+  #waitlist .form-group input,
+  #waitlist .form-group select {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  #waitlist .form-group input::placeholder { color: rgba(255,255,255,0.35); }
+  #waitlist .form-group input:focus,
+  #waitlist .form-group select:focus { border-color: #fff; }
+  #waitlist .form-submit {
+    background: #fff;
+    color: var(--slate);
+  }
+  #waitlist .form-submit:hover { background: rgba(255,255,255,0.85); }
+  #waitlist .form-success {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+    border-left-color: #fff;
+    color: rgba(255,255,255,0.85);
+  }
+
   /* FINAL CTA */
   #final { background: var(--slate); color: #fff; text-align: center; padding: 6rem 2rem; }
   #final h2 { color: #fff; margin-bottom: 0.75rem; }
@@ -534,7 +663,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-brand" href="https://nobsspineconsult.com">No BS Spine Consults</a>
+  <a class="nav-brand" href="https://nobsspineconsult.com">No BS Spine Consult</a>
   <a href="tel:5022426370" class="nav-phone">(502) 242-6370</a>
   <button class="nav-cta" onclick="openCalendly()">Get your consult</button>
 </nav>
@@ -548,7 +677,7 @@
 <section id="hero">
   <div class="container">
     <p class="hero-eyebrow fade-up"><span></span>Board-Certified Spine Surgery<span></span></p>
-    <h1 class="fade-up delay-1">No BS<br>Spine Consults</h1>
+    <h1 class="fade-up delay-1">No BS<br>Spine Consult</h1>
     <p class="hero-sub fade-up delay-2">A straight answer from a spine surgeon — surgery or no surgery.</p>
     <p class="hero-support fade-up delay-3">Clear explanations. No pressure. No hospital agenda.</p>
     <button class="btn-primary fade-up delay-4" onclick="openCalendly()">Get your No BS consult</button>
@@ -580,6 +709,52 @@
     </div>
   </div>
 </div>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="reviews-header">
+    <p class="section-label" style="justify-content:center; text-align:center;">What patients say</p>
+    <div class="rating-line">
+      <span class="rating-score">4.9</span>
+      <span class="rating-stars">★★★★★</span>
+    </div>
+    <p class="rating-sub">300+ Google reviews · Dr. V's practice, miiSpine — Louisville, KY</p>
+  </div>
+  <div class="reviews-marquee">
+    <div class="reviews-track" id="reviewsTrack">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Dr. Vemuri takes time to explain the medical issues, the possible remedies, and the likely outcomes. He neither sugar-coats the prognosis, nor is he 'doom and gloom.' The facts are laid out and the patient is able to make an informed decision."</p>
+        <div><div class="review-name">Nancy M.</div><div class="review-source">Google Review</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Dr. Vemuri explained my spine condition in words that I can understand. His new X-ray equipment appears to be state of the art. Dr. Vemuri is very nice to talk to. I would recommend him to anyone in need of back care."</p>
+        <div><div class="review-name">Robert S.</div><div class="review-source">Google Review</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"I am so impressed. Dr Vemuri found an issue in my spine that has so many side effects, several of my Drs. were banging their head against the proverbial wall not realizing the spinal issue was the root of so many other unexplainable conditions."</p>
+        <div><div class="review-name">Dennis A.</div><div class="review-source">Google Review</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Dr. Vemuri performed complex fusion surgery for me in May 2000 which has been remarkably successful… He is a highly skilled surgeon."</p>
+        <div><div class="review-name">Paul W.</div><div class="review-source">Google Review</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Dr Vemuri has done three surgeries on me, one neck two back. The last surgery was a laminectomy which was so minor I was in no pain and up moving around the next day. I trust and think Dr Vemuri is a good professional doctor."</p>
+        <div><div class="review-name">Debra L.</div><div class="review-source">Google Review</div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"I have 100% trust in Dr Vemuri's care! Dr Vemuri takes the time to listen to your concerns and always puts your well being first!"</p>
+        <div><div class="review-name">Sherri L.</div><div class="review-source">Google Review</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- PROBLEM -->
 <section id="problem">
@@ -730,7 +905,7 @@
         <h2 style="margin-bottom:1rem;">Fellowship-trained.<br>Independent.<br>No agenda.</h2>
         <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1rem;">I'm Venu Vemuri, DO — a board-certified, fellowship-trained minimally invasive spine surgeon and founder of miiSpine in Louisville, Kentucky.</p>
         <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1rem;">I trained at Norton Leatherman Spine Center and have performed over 5,000 spine surgeries. I left a large group practice to build an independent practice — because I believe patients deserve a surgeon whose only loyalty is to them.</p>
-        <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1.5rem;">No BS Spine Consults exists because too many patients come to me confused, scared, and having received completely different recommendations from different doctors. This is my attempt to fix that — one honest conversation at a time.</p>
+        <p style="font-size:0.95rem; color:var(--ink-muted); line-height:1.75; margin-bottom:1.5rem;">No BS Spine Consult exists because too many patients come to me confused, scared, and having received completely different recommendations from different doctors. This is my attempt to fix that — one honest conversation at a time.</p>
         <div style="display:flex; flex-direction:column; gap:0.5rem;">
           <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--ink-muted);">
             <span style="color:var(--slate); font-weight:600;">—</span> Board-Certified, American Osteopathic Board of Orthopedic Surgery
@@ -796,7 +971,7 @@
     <div style="display:flex; align-items:center; gap:2rem; background:var(--slate); border-radius:4px; padding:2rem 2.5rem;">
       <img
         src="https://raw.githubusercontent.com/vvemuriloc-ai/nobsspineconsults/main/Emily%20NOBS%20chat.png"
-        alt="Emily — No BS Spine Consults Patient Coordinator"
+        alt="Emily — No BS Spine Consult Patient Coordinator"
         style="width:90px; height:90px; border-radius:50%; object-fit:cover; object-position:center top; flex-shrink:0; border:3px solid rgba(255,255,255,0.2);"
       />
       <div style="flex:1;">
@@ -813,8 +988,86 @@
   <div class="container">
     <p class="section-label">Get in touch</p>
     <h2>Tell us about your situation.</h2>
-    <p class="lead" style="font-size:0.92rem; margin-bottom:2rem;">Not ready to book yet? Send us a message and we'll follow up within one business day.</p>
-    <a href="https://www.miispine.com/request-an-appointment" target="_blank" class="btn-primary">Request an Appointment</a>
+    <p class="lead" style="font-size:0.92rem; margin-bottom:0;">Not ready to book yet? Send a brief summary and we'll follow up within one business day.</p>
+    <form class="form-grid" id="intakeForm" action="https://formspree.io/f/xzdkdwww" method="POST">
+      <input type="hidden" name="_subject" value="New No BS Spine Consult Inquiry">
+      <input type="text" name="_gotcha" style="display:none;">
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(502) 555-0100">
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+          <option value="" disabled selected>Select state</option>
+          <option value="KY">Kentucky</option>
+          <option value="IN">Indiana</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label for="tier">Consult tier of interest</label>
+        <select id="tier" name="tier">
+          <option value="" disabled selected>Select a tier</option>
+          <option value="Essential — $99 Founding Price">Essential — $99 Founding Price (Record & Imaging Review)</option>
+          <option value="Live Consult — $199 Founding Price">Live Consult — $199 Founding Price (Live with Dr. V)</option>
+          <option value="Elite — $549">Elite — $549 (Surgical Decision Review)</option>
+          <option value="Not sure">Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label for="situation">Brief description of your situation</label>
+        <textarea id="situation" name="situation" placeholder="Describe your symptoms, how long you've had them, and what imaging you have available..."></textarea>
+      </div>
+      <div class="full">
+        <button type="submit" class="form-submit">Send message</button>
+        <div class="form-success" id="formSuccess">
+          Thank you. We'll be in touch within one business day.
+        </div>
+        <p style="margin-top:1rem; font-size:0.8rem; color:var(--ink-faint);">Prefer the miiSpine appointment form? <a href="https://www.miispine.com/request-an-appointment" target="_blank" style="color:var(--slate);">Request an appointment →</a></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section id="waitlist">
+  <div class="container">
+    <p class="section-label">Outside Kentucky & Indiana?</p>
+    <h2>Join the waitlist.</h2>
+    <p class="lead" style="font-size:0.92rem; margin-bottom:2rem;">No BS Spine Consult is expanding to additional states. Join the waitlist and you'll be the first to know — and the first in line — when consults open in your state.</p>
+    <form class="form-grid" id="waitlistForm" action="https://formspree.io/f/xzdkdwww" method="POST">
+      <input type="hidden" name="_subject" value="No BS Waitlist Signup">
+      <input type="text" name="_gotcha" style="display:none;">
+      <div class="form-group">
+        <label for="wl-name">Full name</label>
+        <input type="text" id="wl-name" name="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-group">
+        <label for="wl-email">Email address</label>
+        <input type="email" id="wl-email" name="email" placeholder="jane@email.com" required>
+      </div>
+      <div class="form-group full">
+        <label for="wl-state">Your state</label>
+        <select id="wl-state" name="state" required>
+          <option value="" disabled selected>Select your state</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Iowa</option><option>Kansas</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+        </select>
+      </div>
+      <div class="full">
+        <button type="submit" class="form-submit">Join the waitlist</button>
+        <div class="form-success" id="waitlistSuccess">
+          You're on the list. We'll reach out the moment consults open in your state.
+        </div>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -829,9 +1082,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <p style="margin-bottom:0.75rem;"><strong>No BS Spine Consults</strong> &nbsp;|&nbsp; nobsspineconsult.com &nbsp;|&nbsp; <a href="tel:5022426370" style="color:rgba(255,255,255,0.65); text-decoration:none;">(502) 242-6370</a> &nbsp;|&nbsp; A service of miiSpine, Louisville, Kentucky</p>
+  <p style="margin-bottom:0.75rem;"><strong>No BS Spine Consult</strong> &nbsp;|&nbsp; nobsspineconsult.com &nbsp;|&nbsp; <a href="tel:5022426370" style="color:rgba(255,255,255,0.65); text-decoration:none;">(502) 242-6370</a> &nbsp;|&nbsp; A service of miiSpine, Louisville, Kentucky</p>
   <p style="max-width:680px; margin:0 auto;">
-    <strong>Medical Disclaimer:</strong> No BS Spine Consults is an advisory opinion service only. It does not constitute emergency care, does not establish a formal physician-patient relationship, and does not include the prescribing of medications or the performance of procedures. This service is intended for informational and educational purposes. Consults are available to residents of Kentucky and Indiana only. If you are experiencing a medical emergency, call 911 or go to your nearest emergency room immediately.
+    <strong>Medical Disclaimer:</strong> No BS Spine Consult is an advisory opinion service only. It does not constitute emergency care, does not establish a formal physician-patient relationship, and does not include the prescribing of medications or the performance of procedures. This service is intended for informational and educational purposes. Consults are available to residents of Kentucky and Indiana only. If you are experiencing a medical emergency, call 911 or go to your nearest emergency room immediately.
   </p>
   <p style="margin-top:1rem;">© 2025 miiSpine. All rights reserved.</p>
 </footer>
@@ -841,6 +1094,68 @@
   function openCalendly() {
     Calendly.initPopupWidget({ url: 'https://calendly.com/drv-4/45min' });
     return false;
+  }
+
+  // Duplicate review cards for seamless infinite scroll
+  const track = document.getElementById('reviewsTrack');
+  if (track) { track.innerHTML += track.innerHTML; }
+
+  // Intake form AJAX submission
+  const intakeForm = document.getElementById('intakeForm');
+  if (intakeForm) {
+    intakeForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = intakeForm.querySelector('.form-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/xzdkdwww', {
+          method: 'POST',
+          body: new FormData(intakeForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          intakeForm.reset();
+          document.getElementById('formSuccess').style.display = 'block';
+          btn.textContent = 'Sent';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
+  }
+
+  // Waitlist AJAX submission
+  const wlForm = document.getElementById('waitlistForm');
+  if (wlForm) {
+    wlForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = wlForm.querySelector('.form-submit');
+      btn.textContent = 'Joining…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/xzdkdwww', {
+          method: 'POST',
+          body: new FormData(wlForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          wlForm.reset();
+          document.getElementById('waitlistSuccess').style.display = 'block';
+          btn.textContent = 'Joined';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
   }
 </script>
 
