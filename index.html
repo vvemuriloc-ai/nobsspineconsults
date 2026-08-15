@@ -116,11 +116,20 @@
 
   /* HERO */
   #hero {
-    padding-top: 9.5rem;
-    padding-bottom: 5rem;
+    padding-top: 7.5rem;
+    padding-bottom: 0;
     background: var(--white);
     border-bottom: 1px solid var(--rule);
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+  }
+  .hero-text {
+    padding: 4rem 3rem 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
   }
   .hero-eyebrow {
     font-size: 0.72rem;
@@ -135,20 +144,20 @@
     width: 28px; height: 1px;
     background: var(--ink-faint);
     vertical-align: middle;
-    margin: 0 0.6rem;
+    margin-right: 0.6rem;
   }
   h1 {
     font-family: var(--serif);
-    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-size: clamp(2.6rem, 5.5vw, 4.4rem);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.08;
     letter-spacing: -0.03em;
     color: var(--ink);
     margin-bottom: 1.2rem;
   }
   .hero-sub {
     font-family: var(--serif);
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
     font-weight: 400;
     font-style: italic;
     color: var(--ink-muted);
@@ -158,6 +167,47 @@
     font-size: 0.95rem;
     color: var(--ink-faint);
     margin-bottom: 2.5rem;
+  }
+  .hero-photo {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+  }
+  .hero-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--white) 0%, transparent 10%),
+                linear-gradient(to top, rgba(26,26,26,0.55) 0%, transparent 38%);
+    pointer-events: none;
+  }
+  .hero-photo-caption {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 2;
+  }
+  .hero-photo-caption p {
+    color: #fff;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+  .hero-photo-caption span {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
   .btn-primary {
     display: inline-block;
@@ -651,6 +701,10 @@
 
   /* RESPONSIVE */
   @media (max-width: 640px) {
+    #hero { grid-template-columns: 1fr; }
+    .hero-text { padding: 2.5rem 1.5rem 2.5rem; text-align: center; }
+    .hero-eyebrow span { display: none; }
+    .hero-photo { min-height: 420px; }
     .faq-item { grid-template-columns: 1fr; gap: 0.6rem; }
     .card-grid { grid-template-columns: 1fr; }
     .form-grid { grid-template-columns: 1fr; }
@@ -675,12 +729,21 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="container">
-    <p class="hero-eyebrow fade-up"><span></span>Board-Certified Spine Surgery<span></span></p>
+  <div class="hero-text">
+    <p class="hero-eyebrow fade-up"><span></span>Board-Certified Spine Surgery</p>
     <h1 class="fade-up delay-1">No BS<br>Spine Consult</h1>
     <p class="hero-sub fade-up delay-2">A straight answer from a spine surgeon — surgery or no surgery.</p>
     <p class="hero-support fade-up delay-3">Clear explanations. No pressure. No hospital agenda.</p>
-    <button class="btn-primary fade-up delay-4" onclick="openCalendly()">Get your No BS consult</button>
+    <div class="fade-up delay-4">
+      <button class="btn-primary" onclick="openCalendly()">Get your No BS consult</button>
+    </div>
+  </div>
+  <div class="hero-photo fade-up delay-2">
+    <img src="https://raw.githubusercontent.com/vvemuriloc-ai/nobsspineconsults/main/1T3A9380-2.jpg" alt="Dr. Venu Vemuri, DO — Board-Certified Spine Surgeon">
+    <div class="hero-photo-caption">
+      <p>Dr. Venu Vemuri, DO</p>
+      <span>Board-Certified · Fellowship-Trained · 5,000+ Surgeries · Fusion Patient</span>
+    </div>
   </div>
 </section>
 
